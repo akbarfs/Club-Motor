@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-[#222831] text-[#ffff]">
+
+    <nav class="border-gray-200 bg-gray-700 dark:bg-gray-800 dark:border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white flex flex-row">Klaten<div class="text-[#fd7014]">Riders</div></span>
+          </a>
+          <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full" id="navbar-hamburger">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+              <li>
+                <a href="#Hero" class="block py-2 pl-3 pr-4 text-white bg-gray-800 rounded dark:bg-blue-600" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#Profile" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Profile</a>
+              </li>
+              <li>
+                <a href="#Visi-Misi" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white">Visi dan Misi</a>
+              </li>
+              <li>
+                <a href="#Produk" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Produk Kami</a>
+              </li>
+              <li>
+                <a href="#Kontak" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Kontak Kami</a>
+              </li>
+              <li>
+                <a href="#About" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  
+    <!-- drawer init and show -->
+    <div class="text-center -rotate-90 fixed mt-16 -ml-14">
+      <button class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+      Tampilkan Menu
+      </button>
+    </div>
+
+    <!-- drawer component -->
+    <div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
+      <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Close menu</span>
+      </button>
+    <div class="py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#Artikel" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                  <span class="ml-3">Artikel</span>
+              </a>
+            </li>
+            <li>
+              <a href="#Event" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Event dan Kegiatan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#Galeri" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Galeri Foto</span>
+              </a>
+            </li>
+            <li>
+              <a href="#Client" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Klien kami</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+              </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+        
+    <section id="Hero" class="">
+      <video autoplay="" loop="" muted="" playsinline="" poster="" class="w-full h-[800px] opacity-20 -z-10 absolute top-0 left-0">
+        <source src="./img/bg.mp4" type="video/mp4">
+      </video>
+        <div class="container mx-auto mb-36">
+          <h1 class="text-center text-4xl md:text-6xl font-extrabold mt-10 md:mt-32">Selamat Datang</h1>
+          <h2 class="text-center text-4xl md:text-6xl font-extrabold mt-2">di Klaten Riders</h2>
+          <div class="flex flex-row justify-center mt-10 gap-8">
+            <div class="bg-slate-400 hover:bg-slate-600 w-fit h-fit py-3 px-8 text-base font-semibold"><button class="text-[#404040]">Join Us</button></div>
+            <div class="border-slate-400 border w-fit h-fit py-3 px-8 text-base font-semibold hover:bg-slate-400 hover:text-[#404040]"><button>Hubungi kami</button></div>
+          </div>
+        </div>
+    </section>
+    
+    <section id="About" class="bg-[#222831]">
+      <div class="container mx-auto pb-10 pt-10 md:pt-24">
+        <div class="mx-20 flex flex-col md:flex-row gap-14">
+          <div>
+            <div class="flex flex-row gap-5 mb-5 font-semibold text-lg">
+              <div class="w-[5px] h-[25px] bg-[#fd7014]"></div>
+              <h1>About Us</h1>
+            </div> 
+            <p class="w-full md:w-[670px] mb-5 h-fit text-justify">
+              Klaten Riders merupakan komunitas sepeda motor adalah kelompok atau perkumpulan orang yang memiliki minat dan hobi yang sama terhadap sepeda motor. Mereka berkumpul dan berinteraksi dengan tujuan saling berbagi pengalaman, pengetahuan, serta menjalin persahabatan dalam konteks penggunaan sepeda motor  <br><br>
+              Salah satu tujuan utama dari komunitas ini adalah memperluas jaringan sosial dan pertemanan dengan orang-orang yang memiliki minat serupa. Mereka dapat berdiskusi tentang teknik mengendarai, perawatan sepeda motor, merekomendasikan tempat wisata yang menarik untuk dikunjungi, dan berbagai topik lain yang terkait dengan sepeda motor.
+            </p>  
+            <div class="flex flex-row gap-5">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+          <div class="w-full h-fit border-l-4 border-[#fd7014] bg-slate-500 ">
+            <img src="https://images.unsplash.com/photo-1506424482693-1f123321fa53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=803&q=80" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Visi-Misi" class="bg-[#596880]">
+      <div class="container mx-auto py-10">
+        <div class="mx-20">
+          <h1 class="text-xl font-bold text-center">Visi dan Misi</h1>
+          <div class="w-[120px] h-[5px] bg-[#222831] mx-auto mt-3 mb-6"></div>
+          <p class="text-justify">
+            Berperan aktif dalam menyebarkan kesadaran akan keselamatan berkendara dan mengedukasi anggotanya tentang etika berkendara yang baik. Mereka dapat mengadakan pelatihan mengemudi yang aman, mengkampanyekan penggunaan perlengkapan keselamatan seperti helm, dan berbagi informasi mengenai peraturan lalu lintas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Profile" class="bg-[#222831] pt-5">
+      <div class="container mx-auto py-10">
+        <div class="mx-20 flex flex-col md:flex-row gap-14">
+          <div class="w-full h-fit border-l-4 border-[#fd7014] bg-slate-500 ">
+            <img src="https://images.unsplash.com/photo-1558980664-2cd663cf8dde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
+          </div>
+          <div>
+            <div class="flex flex-row gap-5 mb-5 font-semibold text-lg">
+              <div class="w-[5px] h-[25px] bg-[#fd7014]"></div>
+              <h1>Mengapa Bergabung dengan Kami ?</h1>
+            </div> 
+            <p class="w-[670px] mb-5 h-fit text-justify">
+              <ul class="list-disc ml-5">
+                <li>Pertemanan dan jaringan sosial
+                  <br>bertemu dengan orang-orang yang memiliki minat yang sama dan menjalin persahabatan baru
+                </li>
+                <li>Pertukaran pengetahuan
+                  <br>belajar dari pengalaman dan pengetahuan anggota komunitas lain tentang sepeda motor, perawatan, modifikasi, dan tempat-tempat menarik untuk dikunjungi.
+                </li>
+                <li>Keamanan dan keselamatan
+                  <br>meningkatkan kesadaran akan keselamatan berkendara dan memperoleh saran tentang peralatan pelindung yang tepat.
+                </li>
+                <li>Kesempatan untuk melakukan kegiatan bersama
+                  <br>acara dan kegiatan yang menyenangkan seperti touring, pameran, atau acara amal.
+                </li>
+                <li>Pengembangan keterampilan
+                  <br>mengembangkan keterampilan berkendara dan meningkatkan pengetahuan teknis tentang sepeda motor melalui interaksi dengan anggota komunitas yang berpengalaman.
+                </li>
+              </ul>
+            </p>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Produk" class="bg-[#222831] pt-5">
+      <div class="container mx-auto py-10">
+        <div class="mx-20">
+        <h1 class="text-xl font-bold text-center">Produk</h1>
+        <div class="w-[120px] h-[5px] bg-[#fd7014] mx-auto my-10"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 my-6">
+          <div class="w-full h-[240px] p-4 bg-slate-500 ">
+            <img class="w-full h-24 object-cover" src="https://images.unsplash.com/photo-1599280032270-0046e64bd588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
+            <h1 class="font-semibold bg-slate-500 -mt-6 ml-1 mb-1 shadow-2xl text-slate-50 p-3">Pelatihan Basic Motor Matic</h1>
+            <p>Pelatihan dasar untuk pemula motor matic</p>
+            <button class="w-full py-2 mt-1 bg-slate-800">Daftar Sekarang</button>
+          </div>
+          <div class="w-full h-[240px] p-4 bg-slate-500 ">
+            <img class="w-full h-24 object-cover" src="https://images.unsplash.com/photo-1599280032270-0046e64bd588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
+            <h1 class="font-semibold bg-slate-500 -mt-6 ml-1 mb-1 shadow-2xl text-slate-50 p-3">Pelatihan Motor Manual</h1>
+            <p>Pelatihan dasar untuk pemula motor manual</p>
+            <button class="w-full py-2 mt-1 bg-slate-800">Daftar Sekarang</button>
+          </div>
+          <div class="w-full h-[240px] p-4 bg-slate-500 ">
+            <img class="w-full h-24 object-cover" src="https://images.unsplash.com/photo-1599280032270-0046e64bd588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
+            <h1 class="font-semibold bg-slate-500 -mt-6 ml-1 mb-1 shadow-2xl text-slate-50 p-3">Pelatihan lanjutan Motor</h1>
+            <p>Pelatihan lanjutan untuk advance sepeda motor</p>
+            <button class="w-full py-2 mt-1 bg-slate-800">Daftar Sekarang</button>
+          </div>
+          <div class="w-full h-[240px] p-4 bg-slate-500 ">
+            <img class="w-full h-24 object-cover" src="https://images.unsplash.com/photo-1599280032270-0046e64bd588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
+            <h1 class="font-semibold bg-slate-500 -mt-6 ml-1 mb-1 shadow-2xl text-slate-50 p-3">Sewa Motor</h1>
+            <p>Penyewaan segala jenis sepeda motor</p>
+            <button class="w-full py-2 mt-1 bg-slate-800">Sewa Sekarang</button>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button class="bg-[#fd7014] w-full md:w-fit items-center px-8 py-4 text-base font-semibold">Lihat Semua</button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Client" class="my-10">
+      <div class="container mx-auto">
+        <div class="mx-20">
+          <div class="flex flex-col md:flex-row gap-16">
+            <div class="text-2xl font-bold text-center md:text-left">
+                <h2 class="md:text-4xl">Our 100+</h2>
+                <h5>Hiring Partner</h5>
+            </div>
+            <div class="grid md:flex grid-cols-3 md:flex-row justify-center items-center">
+              <div class="w-20 h-fit mr-16">
+                <img src="https://th.bing.com/th/id/R.6f8a30574827a2b99ae70f505c99d4fa?rik=TfiwklIkzaJ1nw&riu=http%3a%2f%2f3.bp.blogspot.com%2f-jy7miyz_u1U%2fUCAbUIve76I%2fAAAAAAAAGfY%2fbHaqHojSvJw%2fs1600%2fLOGO%2bPOLDA%2bJAWA%2bTENGAH.png&ehk=zHDUR9RmmiemKf5j2g1SJktnUIaU1Xi0brefN06EjY4%3d&risl=&pid=ImgRaw&r=0" alt="">
+              </div>
+              <div class="w-20 h-fit mr-16">
+                <img src="https://logos-world.net/wp-content/uploads/2021/03/Honda-Logo.png" alt="" srcset="">
+              </div>
+              <div class="w-20 h-fit mr-16">
+                <img src="https://logodownload.org/wp-content/uploads/2014/04/honda-motos-logo-01.png" alt="" srcset="">
+              </div>
+              <div class="w-20 h-fit mr-16">
+                <img src="https://logodix.com/logo/60034.png" alt="">
+              </div>
+              <div class="w-20 h-fit mr-16">
+                <img src="https://1.bp.blogspot.com/-tR59_3q2Z2Y/YIJ62ioh6NI/AAAAAAAACkc/W5JTyrlwi7oQGKYb1XWDtZySUbBM_THiQCNcBGAsYHQ/s2048/Pertamina.png" alt="" srcset="">
+              </div>
+              <div class="w-20 h-fit mr-16">
+                <img src="https://id-test-11.slatic.net/shop/270b96ac1ac57efabd0abc20a8c8f080.png" alt="" srcset="">
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Galeri" class="bg-[#222831] pt-5">
+      <div class="container mx-auto py-10">
+        <div class="mx-20">
+        <h1 class="text-xl font-bold text-center">Galeri</h1>
+        <div class="w-[120px] h-[5px] bg-[#fd7014] mx-auto my-10"></div>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-2 my-6">
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+          <div class="w-full h-fit border-2 border-slate-50 rounded-md ">
+            <img class="rounded-md" src="https://images.unsplash.com/photo-1607907704529-223bf0e7c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=488&q=80" alt="" srcset="">
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button class="bg-[#fd7014] w-full md:w-fit items-center px-8 py-4 text-base font-semibold">Lihat Semua</button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Event">
+      <div class="container mx-auto mb-20">
+        <div class="mx-20">          
+          <div class="text-2xl font-bold mb-5 md:text-left text-center">
+            <h2 class="">Event & Kegiatan</h2>
+          </div>
+          <div id="animation-carousel" class="relative w-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-200 ease-linear" data-carousel-item>
+                    <img src="https://images.unsplash.com/photo-1558978806-b6ab5e50d0d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-200 ease-linear" data-carousel-item>
+                    <img src="https://images.unsplash.com/photo-1570304815308-1a24e22dce65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Artikel" class="relative w-full py-[20px] h-fit pb-14 md:h-[450px] ">    
+      <div class="container mx-auto">
+        <div class="mx-20">
+          <div class="flex flex-col md:flex-row gap-10">
+            <div class="md:text-left text-center mb-4">
+                <h1 class="text-[24px] font-bold mb-[30px]">Artikel</h1>
+                <p>Baca artikel terbaru secara gratis</p>
+                <div class="border-2 mb-5 border-[#4a4a4a] hover:bg-[#4a4a4a] hover:text-[#fff] p-4 mx-auto mt-4 md:mx-0 font-medium w-fit h-fit"><a href="index.php?include=semua-artikel"><span class="mr-2">Semua artikel</span><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+            </div>
+            <div class="w-full h-fit grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-20">
+                    <a href="artikel.html">
+                      <div class="w-full md:w-[350px] h-fit rounded-sm">
+                        <div class="relative bg-slate-300 hover:bg-slate-200 border-l-4 border-[#ffe13e] p-[15px] md:mr-12">
+                            <p class=" block text-[16px] text-[#696969] font-bold">Keselamatan Berkendara: Membangun Kebiasaan Positif.</p>
+                            <span class="text-[#a4a4a4] italic mt-[15px]">Keselamatan berkendara adalah aspek yang sangat penting dalam kehidupan sehari-hari. Setiap tahun, ribuan kecelakaan terjadi di seluruh dunia akibat kelalaian pengemudi dan pelanggaran ... </span>
+                            <p class="text-[#a4a4a4] italic mt-[15px]">20 Menit lalu</p>
+                        </div>
+                      </div>  
+                    </a>
+                    <div class="w-full md:w-[350px] h-fit rounded-sm ">
+                        <div class="relative bg-slate-300 hover:bg-slate-200 border-l-4 border-[#ffe13e] p-[15px] md:mr-12">
+                            <p class=" block text-[16px] text-[#696969] font-bold">Memahami Lalu Lintas: Pentingnya Disiplin dan Kesadaran</p>
+                            <span class="text-[#a4a4a4] italic mt-[15px]">Lalu lintas adalah bagian tak terpisahkan dari kehidupan modern kita. Setiap hari, jutaan kendaraan bergerak di jalan raya dengan tujuan beragam. Namun, untuk menjaga lalu lintas tetap aman ...</span>
+                            <p class="text-[#a4a4a4] italic mt-[15px]">5 Hari lalu</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-[300px] h-fit rounded-sm ">
+                      <div class="relative bg-slate-300 hover:bg-slate-200 border-l-4 border-[#ffe13e] p-[15px] md:mr-12">
+                          <p class=" block text-[16px] text-[#696969] font-bold">Bergabung dalam Klub Motor: Menikmati Kebahagiaan Komunitas Pengendara Motor</p>
+                          <span class="text-[#a4a4a4] italic mt-[15px]">Hobi mengendarai motor tidak hanya tentang mengeksplorasi kebebasan di jalan raya dan adapun ...</span>
+                          <p class="text-[#a4a4a4] italic mt-[15px]">2 Minggu lalu</p>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="video">
+      <div class="container mx-auto">
+        <div class="mx-20 my-10">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/OQZ3N6bKgXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>      
+    </section>
+
+    <footer id="Kontak" class="bg-gray-700">
+      <div class="container mx-auto">
+        <div class="mx-20">
+          <div class="pt-10 pb-20">
+            <h1 class="text-2xl font-bold">KlatenRiders</h1><br>
+            <p>Location : Klaten, Jawa Tengah, Indonesia</p>
+            <p>Email : klaten@raiders.kltn</p>
+            <p>Telpon : +62 895-414-364-646</p><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506122.9000423104!2d110.29252813809727!3d-7.673994262536874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a41640793a899%3A0x76c4a8b38d7a5510!2sKabupaten%20Klaten%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1685308407731!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="w-full h-fit py-4">© KlatenRiders 2023.</div>
+        </div>
+      </div>
+    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script src="https://kit.fontawesome.com/93f7fe0b18.js" crossorigin="anonymous"></script></body>
+</html>
